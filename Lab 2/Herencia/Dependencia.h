@@ -9,4 +9,6 @@ public:
 		uml.imprimir();
 		cout << " tiene dependencia ";
 	}
+private:
+	string icono;
 };

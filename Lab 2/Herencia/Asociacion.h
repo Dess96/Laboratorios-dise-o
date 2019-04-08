@@ -9,5 +9,7 @@ public:
 		uml.imprimir();
 		cout << " tiene asociacion ";
 	}
+private:
+	string icono;
 };
 

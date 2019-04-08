@@ -10,4 +10,6 @@ public:
 		uml.imprimir();
 		cout << " tiene agregacion ";
 	}
+private:
+	string icono;
 };

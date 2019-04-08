@@ -2,9 +2,10 @@
 #define NODO_UML
 
 #include"Nodo.h"
+#include"Agrup.h"
 #include<string>
 
-class ND_UML : Nodo {
+class ND_UML : public Nodo, public Agrup {
 
 private:
 	string nombre;
@@ -13,13 +14,5 @@ private:
 public:
 	string get_nombre();
 	void set_nombre(string nombre);
-	//Operaciones 
-	void seleccionar_nodo();
-	void cortar_nodo();
-	void pegar_nodo();
-	void eliminar_nodo();
-	void aumentar_nodo();
-	void reducir_nodo();
-	void dibujar_nodo();
 };
 #endif // !NODO_UML

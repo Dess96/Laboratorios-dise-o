@@ -1,6 +1,7 @@
 #include"Arista.h"
+#include"Agrup.h"
 
-class Arista_UML : public Arista {
+class Arista_UML : public Arista, public Agrup {
 private:
 	int multiplicidad;
 	int rol;
@@ -19,12 +20,4 @@ public:
 	void set_multiplicidad_fin(int);
 	int get_multiplicidad_inicio();
 	int get_multiplicidad_fin();
-	//Operaciones 
-	void seleccionar_arista();
-	void cortar_arista();
-	void pegar_arista();
-	void eliminar_arista();
-	void aumentar_arista();
-	void reducir_arista();
-	void dibujar_arista();
 };

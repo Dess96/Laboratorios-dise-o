@@ -9,4 +9,6 @@ public:
 		uml.imprimir();
 		cout << " tiene realizacion" << endl;
 	}
+private:
+	string icono;
 };

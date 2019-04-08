@@ -9,4 +9,6 @@ public:
 		uml.imprimir();
 		cout << " tiene contenido ";
 	}
+private:
+	string icono;
 };

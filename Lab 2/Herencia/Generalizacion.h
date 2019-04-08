@@ -9,5 +9,7 @@ public:
 		uml.imprimir();
 		cout << " tiene generalizacion " << endl;
 	}
+private:
+	string icono;
 };
 
