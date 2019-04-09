@@ -21,11 +21,25 @@ public:
 	int get_multiplicidad_inicio();
 	int get_multiplicidad_fin();
 
-	void seleccionar(int id) override;
-	void cortar(int id) override;
-	void pegar(int id) override;
-	void eliminar(int id) override;
-	void aumentar(int id) override;
-	void reducir(int id) override;
-	void dibujar(int id) override; //?
+	void seleccionar(int id) override {
+		cout << "Seleccionando una arista UML" << endl;
+	}
+	void cortar(int id) override {
+
+	}
+	void pegar(int id) override {
+
+	}
+	void eliminar(int id) override {
+
+	}
+	void aumentar(int id) override {
+
+	}
+	void reducir(int id) override {
+
+	}
+	void dibujar(int id) override {
+		 
+	}
 };
