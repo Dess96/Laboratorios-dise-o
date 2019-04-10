@@ -22,7 +22,7 @@ public:
 	int get_multiplicidad_fin();
 
 	void seleccionar(int id) override {
-		cout << "Seleccionando una arista UML" << endl;
+		cout << "Seleccionando una arista UML con id " << id << endl;
 	}
 	void cortar(int id) override {
 

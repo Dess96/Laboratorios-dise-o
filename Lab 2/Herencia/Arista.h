@@ -14,15 +14,23 @@ private:
 	Nodo destino;
 
 public:
-	Arista() {};
-	virtual ~Arista() {};
+	Arista() {
+
+	};
+	virtual ~Arista() {
+	
+	};
 	virtual void imprimir() const = 0;
 	void set_origen(Nodo inicio);
 	Nodo get_origen();
 	void set_destino(Nodo fin);
 	Nodo get_destino();
-	void set_id(int id);
-	int get_id();
+	void set_id(int id_ari) {
+		id = id_ari;
+	}
+	int get_id() {
+		return id;
+	}
 };
 
 #endif // ARISTA!

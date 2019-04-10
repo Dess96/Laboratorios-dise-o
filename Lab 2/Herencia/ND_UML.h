@@ -18,7 +18,7 @@ public:
 	string get_nombre();
 
 	void seleccionar(int id) override {
-		cout << "Seleccionando un nodo UML" << endl;
+		cout << "Seleccionando un nodo UML con id " << id  << endl;
 	}
 	void cortar(int id) override {
 
