@@ -44,22 +44,22 @@ int main() {
 	paq2.llenar_paqP(&paq);
 	
 	cout << endl;
-	cout << "Seleccionar paquete que contiene al diagrama junto con nodos y aristas adicionales" << endl;
+	cout << "Cortando paquete que contiene al diagrama junto con nodos y aristas adicionales" << endl;
 	cout << endl;
-	paq.seleccionar(paq.get_id());
+	paq.cortar(paq.get_id());
 
 	cout << endl;
-	cout << "Seleccionar paquete 2 que contiene al paquete 1" << endl;
+	cout << "Pegando paquete 2 que contiene al paquete 1" << endl;
 	cout << endl;
-	paq2.seleccionar(paq2.get_id());
+	paq2.pegar(paq2.get_id());
 
 	AgrupDin agrup;
 	agrup.llenar_paqP(&paq);
 
 	cout << endl;
-	cout << "Seleccionar agrupacion dinamica que contiene el paquete 1" << endl;
+	cout << "Aumentando agrupacion dinamica que contiene el paquete 1" << endl;
 	cout << endl;
-	agrup.seleccionar(paq.get_id());
+	agrup.aumentar(paq.get_id());
 
 	cin.ignore();
 	return 0;

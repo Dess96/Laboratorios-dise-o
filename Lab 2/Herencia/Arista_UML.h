@@ -25,21 +25,21 @@ public:
 		cout << "Seleccionando una arista UML con id " << id << endl;
 	}
 	void cortar(int id) override {
-
+		cout << "Cortando una arista UML con id " << id << endl;
 	}
 	void pegar(int id) override {
-
+		cout << "Pegando una arista UML con id " << id << endl;
 	}
 	void eliminar(int id) override {
-
+		cout << "Eliminando una arista UML con id " << id << endl;
 	}
 	void aumentar(int id) override {
-
+		cout << "Aumentando una arista UML con id " << id << endl;
 	}
 	void reducir(int id) override {
-
+		cout << "Reduciendo una arista UML con id " << id << endl;
 	}
 	void dibujar(int id) override {
-		 
+		cout << "Dibujando una arista UML con id " << id << endl;
 	}
 };
