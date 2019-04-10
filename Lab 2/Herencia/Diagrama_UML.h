@@ -3,7 +3,6 @@
 #include"Agrup.h"
 #include"ND_UML.h"
 #include<vector>
-#include<iterator>
 using namespace std;
 
 class Diagrama_UML : public Agrup {
@@ -20,7 +19,6 @@ public:
 		Arista_UML ar;
 		for (size_t i = 0; i < nodos_uml.size(); ++i) {
 			nd.seleccionar(nodos_uml[i]);
-
 		}
 		for (size_t j = 0; j < aristas_uml.size(); ++j) {
 			ar.seleccionar(aristas_uml[j]);
