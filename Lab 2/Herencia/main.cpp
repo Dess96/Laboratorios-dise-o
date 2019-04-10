@@ -53,6 +53,14 @@ int main() {
 	cout << endl;
 	paq2.seleccionar(paq2.get_id());
 
+	AgrupDin agrup;
+	agrup.llenar_paqP(&paq);
+
+	cout << endl;
+	cout << "Seleccionar agrupacion dinamica que contiene el paquete 1" << endl;
+	cout << endl;
+	agrup.seleccionar(paq.get_id());
+
 	cin.ignore();
 	return 0;
 }
