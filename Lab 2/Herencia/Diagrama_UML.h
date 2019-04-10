@@ -9,8 +9,7 @@ using namespace std;
 class Diagrama_UML : public Agrup {
 public:
 	Diagrama_UML() {
-		nodos_uml.resize(1);
-		aristas_uml.resize(1);
+		
 	}
 	~Diagrama_UML() {
 
@@ -21,6 +20,7 @@ public:
 		Arista_UML ar;
 		for (size_t i = 0; i < nodos_uml.size(); ++i) {
 			nd.seleccionar(nodos_uml[i]);
+
 		}
 		for (size_t j = 0; j < aristas_uml.size(); ++j) {
 			ar.seleccionar(aristas_uml[j]);
@@ -44,6 +44,7 @@ public:
 	void dibujar(int id) override {
 
 	}
+
 	void llenar_diagN(int nodo_id) {
 		nodos_uml.push_back(nodo_id);
 	}

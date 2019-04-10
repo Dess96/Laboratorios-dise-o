@@ -29,6 +29,24 @@ int main() {
 	cout << endl;
 	diag.seleccionar(diag.get_id());
 
+	Paquete_UML paq;
+	paq.set_id(1);
+	ND_UML nd5, nd6;
+	nd5.set_id(5);
+	nd6.set_id(6);
+	Arista_UML ar4;
+	ar4.set_id(4);
+
+	paq.llenar_paqA(ar4.get_id());
+	paq.llenar_paqN(nd5.get_id());
+	paq.llenar_paqN(nd6.get_id());
+	paq.llenar_paqD(diag.get_id());
+	
+	cout << endl;
+	cout << "Seleccionar paquete" << endl;
+	cout << endl;
+	paq.seleccionar(paq.get_id());
+
 	
 	cin.ignore();
 	return 0;

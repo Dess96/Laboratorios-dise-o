@@ -38,9 +38,9 @@ public:
 
 	}
 private:
-	vector<ND_UML*> nodos_uml;
-	vector<Arista_UML*> aristas_uml;
-	vector<Paquete_UML*> paquetes_uml;
+	vector<int> nodos_uml;
+	vector<int> aristas_uml;
+	vector<int> paquetes_uml;
 };
 #endif // !GROUP
 
