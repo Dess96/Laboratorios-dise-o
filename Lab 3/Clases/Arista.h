@@ -14,9 +14,8 @@ private:
 	Nodo destino;
 
 public:
-	Arista() {};
+	Arista(){};
 	virtual ~Arista() {};
-	virtual void imprimir() const = 0;
 	void set_origen(Nodo inicio);
 	Nodo get_origen();
 	void set_destino(Nodo fin);

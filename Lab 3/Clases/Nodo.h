@@ -9,11 +9,27 @@ class Nodo {
 
 private:
 	int id;
-	vector<int> adyacencias;
+	Nodo* sig;
 
 public:
-	int get_id();
-	void set_id(int);
+	Nodo() {
+
+	}
+
+	~Nodo() {
+
+	}
+
+	void set_id(int id) {
+		this->id = id;
+	}
+
+	int get_id() {
+		return id;
+	}
+
+	Nodo* get_siguiente();
+	void modificar_sig(Nodo* sig);
 };
 #endif // !NODO_B
 
