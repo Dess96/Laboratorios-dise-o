@@ -3,24 +3,20 @@
 
 #include"Nodo.h"
 #include"Agrup.h"
-#include<vector>
+#include<string>
 
-class ND_UML : public Nodo, public Agrup <ND_UML> {
+class ND_UML : public Nodo {
 
 private:
 	static unsigned int idg;
 	unsigned int id;
-	vector<ND_UML> nodos_uml;
-	
+
 public:
 	ND_UML();
 	~ND_UML();
-	ND_UML* begin() { return this; };
-	ND_UML* end() { return this + 1; };
-	void seleccionarN(ND_UML& other);
 	unsigned int get_id();
+	void seleccionar();
 };
-
 unsigned int ND_UML::idg = 0;
 
 ND_UML::ND_UML() {
@@ -31,11 +27,11 @@ ND_UML::~ND_UML() {
 
 }
 
-void ND_UML::seleccionarN(ND_UML& other) {
-	cout << "Se ha seleccionado un nodo con id " << get_id() << endl;
-}
-
 unsigned int ND_UML::get_id() {
 	return id;
+}
+
+void ND_UML::seleccionar() {
+	cout << "Seleccionando un nodo de id " << get_id() << endl;
 }
 #endif // !NODO_UML

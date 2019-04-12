@@ -5,22 +5,33 @@
 #include<vector>
 using namespace std;
 
-class Diagrama_UML : public vector <ND_UML>, public Agrup <Diagrama_UML> {
+class Diagrama_UML : public Agrup <Diagrama_UML> {
+
+private:
+	int id;
 
 public:
-	Diagrama_UML(int count);
-	~Diagrama_UML();
+	Diagrama_UML(int nodos, int aristas) {
+		while (nodos-- > 0) {
+			nodos_uml.push_back(ND_UML{});
+		}
+
+		while (aristas-- > 0) {
+			aristas_uml.push_back(Arista_UML{});
+		}
+	}
+
+	~Diagrama_UML() {
+
+	}
+
+	void set_id(int id_diag) {
+		id = id_diag;
+	}
+
+	int get_id() {
+		return id;
+	}
 };
-
-Diagrama_UML::Diagrama_UML(int count)
-{
-	while (count-- > 0)
-		emplace_back(ND_UML{});
-}
-
-Diagrama_UML::~Diagrama_UML()
-{
-}
-
 #endif // !DIAGRA
 
