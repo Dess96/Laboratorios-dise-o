@@ -20,6 +20,7 @@ public:
 		for (size_t j = 0; j < aristas_uml.size(); ++j) {
 			aristas_uml[j].seleccionar();
 		}
+		tipo.seleccionarD();
 	}
 /*	void cortar(int id);
 	void pegar(int id);

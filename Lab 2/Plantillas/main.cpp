@@ -3,11 +3,11 @@
 #include"Paquete_UML.h"
 
 int main() {
-	Diagrama_UML diag(3, 2);
+/*	Diagrama_UML diag(3, 2);
 	cout << "Seleccionando diagrama que contiene tres nodos y dos aristas" << endl;
 	cout << endl;
-	diag.seleccionar(diag);
-	Paquete_UML paq(5, 2);
+	diag.seleccionar(diag);*/
+	Paquete_UML paq(5, 2, 1, 1);
 	cout << endl;
 	cout << "Seleccionando paquete que contiene cinco nodos y dos aristas" << endl;
 	cout << endl;

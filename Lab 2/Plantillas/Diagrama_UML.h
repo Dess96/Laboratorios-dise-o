@@ -32,6 +32,10 @@ public:
 	int get_id() {
 		return id;
 	}
+
+	void seleccionarD() {
+	//	cout << "Seleccionando un diagrama de id " << get_id() << endl;
+	}
 };
 #endif // !DIAGRA
 
