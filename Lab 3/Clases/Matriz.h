@@ -1,6 +1,7 @@
 #include"Grafo.h"
 #include<vector>
 #include<iostream>
+#define MAX 100
 
 using namespace std;
 
@@ -9,6 +10,7 @@ class Matriz : public Grafo {
 public:
 	Matriz() {
 		num_elem = 0;
+		adyacencias.resize(MAX, vector<int>(MAX));
 	}
 
 	~Matriz() {
@@ -21,8 +23,9 @@ public:
 		ind_dest = destino.get_id();
 		adyacencias[ind_origen][ind_dest] = 1;
 		adyacencias[ind_dest][ind_origen] = 1;
-		for (int i = 0; i < adyacencias.size(); i++) {
-			for (int j = 0; j < adyacencias.size(); j++) {
+		cout << "arista" << endl;
+		for (int i = 0; i < num_elem; i++) {
+			for (int j = 0; j < num_elem; j++) {
 				cout << adyacencias[i][j] << " ";
 			}
 			cout << endl;
@@ -32,12 +35,18 @@ public:
 	void agregar_nodo(Nodo agr_nodo) override {
 		nodos.push_back(agr_nodo);
 		num_elem++;
-		adyacencias = vector<vector<int> >(num_elem, vector<int>(num_elem));
-		for (int i = 0; i < adyacencias.size(); ++i) {
-			adyacencias[i][adyacencias.size() - 1] = 0;
+		for (int i = 0; i < num_elem; ++i) {
+			adyacencias[i][num_elem - 1] = 0;
 		}
-		for (int j = 0; j < adyacencias.size(); j++) {
-			adyacencias[adyacencias.size() - 1][j] = 0;
+		for (int j = 0; j < num_elem; j++) {
+			adyacencias[num_elem - 1][j] = 0;
+		}
+		cout << "agrega" << endl;
+		for (int i = 0; i < num_elem; i++) {
+			for (int j = 0; j < num_elem; j++) {
+				cout << adyacencias[i][j] << " ";
+			}
+			cout << endl;
 		}
 	}
 
@@ -50,11 +59,12 @@ public:
 	}
 
 	void eliminar_nodo(int id) override {
-		for (int i = 0; i < nodos.size(); i++) {
+		for (int i = 0; i < nodos.size(); ++i) {
 			if (nodos[i].get_id() == id) {
 				nodos.erase(nodos.begin() + i);
 			}
 		}
+		num_elem--;
 	}
 
 private:
