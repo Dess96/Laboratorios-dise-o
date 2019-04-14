@@ -15,7 +15,12 @@ public:
 	ND_UML();
 	~ND_UML();
 	unsigned int get_id();
-	void seleccionar();
+	void seleccionar(int id);
+	void cortar(int id);
+	void eliminar(int id);
+	void aumentar(int id);
+	void reducir(int id);
+	void dibujar(int id);
 };
 unsigned int ND_UML::idg = 0;
 
@@ -31,7 +36,23 @@ unsigned int ND_UML::get_id() {
 	return id;
 }
 
-void ND_UML::seleccionar() {
-	cout << "Seleccionando un nodo de id " << get_id() << endl;
+void ND_UML::seleccionar(int id){
+	cout << "Seleccionando un nodo de id " << id << endl;
 }
+void ND_UML::cortar(int id) {
+	cout << "Cortando un nodo de id " << id << endl;
+}
+void ND_UML::eliminar(int id) {
+	cout << "Cortando un nodo de id " << id << endl;
+}
+void ND_UML::aumentar(int id) {
+	cout << "Cortando un nodo de id " << id << endl;
+}
+void ND_UML::reducir(int id) {
+	cout << "Cortando un nodo de id " << id << endl;
+}
+void ND_UML::dibujar(int id) {
+	cout << "dibujando un nodo de id " << id << endl;
+}
+
 #endif // !NODO_UML

@@ -23,7 +23,12 @@ public:
 	int get_multiplicidad_inicio();
 	int get_multiplicidad_fin();
 	unsigned int get_id();
-	void seleccionar();
+	void seleccionar(int id );
+	void cortar(int id);
+	void eliminar(int id);
+	void aumentar(int id);
+	void reducir(int id);
+	void dibujar(int id);
 };
 
 unsigned int Arista_UML::idg = 0;
@@ -39,6 +44,21 @@ unsigned int Arista_UML::get_id() {
 	return id;
 }
 
-void Arista_UML::seleccionar() {
-	cout << "Seleccionando una arista de id " << get_id() << endl;
+void Arista_UML::seleccionar(int arista) {
+	cout << "Seleccionando una arista de id " << arista << endl;
+}
+void Arista_UML::cortar(int arista) {
+	cout << "Cortando una arista de id " << arista << endl;
+}
+void Arista_UML::eliminar(int arista) {
+	cout << "Eliminado una arista de id " << arista << endl;
+}
+void Arista_UML::aumentar(int arista) {
+	cout << "Aumentando una arista de id " << arista << endl;
+}
+void Arista_UML::reducir(int arista) {
+	cout << "reduciendo una arista de id " << arista << endl;
+}
+void Arista_UML::dibujar(int arista) {
+	cout << "dinujando una arista de id " << arista << endl;
 }

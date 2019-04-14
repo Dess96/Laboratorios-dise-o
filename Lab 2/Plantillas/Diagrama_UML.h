@@ -11,14 +11,7 @@ private:
 	int id;
 
 public:
-	Diagrama_UML(int nodos, int aristas) {
-		while (nodos-- > 0) {
-			nodos_uml.push_back(ND_UML{});
-		}
-
-		while (aristas-- > 0) {
-			aristas_uml.push_back(Arista_UML{});
-		}
+	Diagrama_UML() {
 	}
 
 	~Diagrama_UML() {
@@ -35,6 +28,32 @@ public:
 
 	void seleccionarD() {
 	//	cout << "Seleccionando un diagrama de id " << get_id() << endl;
+	}
+	void cortarD() {
+		//	cout << "Seleccionando un diagrama de id " << get_id() << endl;
+	}
+
+	void pegarD() {
+
+	}
+	void eliminarD() {
+
+	}
+	void aumentarD() {
+
+	}
+	void reducirD() {
+
+	}
+	void dibujarD() {
+
+	}
+
+	void llenar_diagN(int nodo_id) {
+		nodos_uml.push_back(nodo_id);
+	}
+	void llenar_diagA(int arista_id) {
+		aristas_uml.push_back(arista_id);
 	}
 };
 #endif // !DIAGRA

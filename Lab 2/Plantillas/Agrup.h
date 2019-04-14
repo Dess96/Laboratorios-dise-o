@@ -14,13 +14,70 @@ public:
 	~Agrup();
 	//Operaciones 
 	void seleccionar(T& tipo) {
+		ND_UML nd;
+		Arista_UML ar;
 		for (size_t i = 0; i < nodos_uml.size(); ++i) {
-			nodos_uml[i].seleccionar();
+			nd.seleccionar(nodos_uml[i]);
 		}
 		for (size_t j = 0; j < aristas_uml.size(); ++j) {
-			aristas_uml[j].seleccionar();
+			ar.seleccionar(aristas_uml[j]);
 		}
 		tipo.seleccionarD();
+	}
+	void cortar(T& tipo) {
+		ND_UML nd;
+		Arista_UML ar;
+		for (size_t i = 0; i < nodos_uml.size(); ++i) {
+			nd.cortar(nodos_uml[i]);
+		}
+		for (size_t j = 0; j < aristas_uml.size(); ++j) {
+			ar.cortar(aristas_uml[j]);
+		}
+		tipo.cortarD();
+	}
+	void eliminar(T& tipo) {
+		ND_UML nd;
+		Arista_UML ar;
+		for (size_t i = 0; i < nodos_uml.size(); ++i) {
+			nd.eliminar(nodos_uml[i]);
+		}
+		for (size_t j = 0; j < aristas_uml.size(); ++j) {
+			ar.eliminar(aristas_uml[j]);
+		}
+		tipo.eliminarD();
+	}
+	void reducir(T& tipo) {
+		ND_UML nd;
+		Arista_UML ar;
+		for (size_t i = 0; i < nodos_uml.size(); ++i) {
+			nd.reducir(nodos_uml[i]);
+		}
+		for (size_t j = 0; j < aristas_uml.size(); ++j) {
+			ar.reducir(aristas_uml[j]);
+		}
+		tipo.reducirD();
+	}
+	void aumentar(T& tipo) {
+		ND_UML nd;
+		Arista_UML ar;
+		for (size_t i = 0; i < nodos_uml.size(); ++i) {
+			nd.aumentar(nodos_uml[i]);
+		}
+		for (size_t j = 0; j < aristas_uml.size(); ++j) {
+			ar.aumentar(aristas_uml[j]);
+		}
+		tipo.aumentarD();
+	}
+	void dibujar(T& tipo) {
+		ND_UML nd;
+		Arista_UML ar;
+		for (size_t i = 0; i < nodos_uml.size(); ++i) {
+			nd.dibujar(nodos_uml[i]);
+		}
+		for (size_t j = 0; j < aristas_uml.size(); ++j) {
+			ar.dibujar(aristas_uml[j]);
+		}
+		tipo.dibujarD();
 	}
 /*	void cortar(int id);
 	void pegar(int id);
@@ -28,8 +85,8 @@ public:
 	void aumentar(int id);
 	void reducir(int id);
 	void dibujar(int id); */
-	vector<ND_UML> nodos_uml;
-	vector<Arista_UML> aristas_uml;
+	vector<int> nodos_uml;
+	vector<int> aristas_uml;
 };
 
 template <typename T>
