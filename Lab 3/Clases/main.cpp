@@ -1,5 +1,7 @@
 #include"Matriz.h"
+#include "Lista.h"
 #include"Nodo.h"
+#include "TipoGrafo.h"
 
 int main() {
 	Matriz m;
@@ -9,11 +11,26 @@ int main() {
 	nd2.set_id(1);
 	Nodo nd3;
 	nd3.set_id(2);
-	m.agregar_nodo(nd);
-	m.agregar_nodo(nd2);
-	m.agregar_nodo(nd3);
-	m.agregar_arista(nd, nd2);
-	m.eliminar_nodo(nd2.get_id());
+
+	
+	TipoGrafo MatrizAdy{ m };
+	MatrizAdy.agregar_arista(nd, nd2);
+	MatrizAdy.agregar_nodo(nd);
+	MatrizAdy.eliminar_arista(nd, nd2);
+	MatrizAdy.eliminar_nodo(nd.get_id());
+
+	Lista lista;
+	TipoGrafo ListaAdy{ lista };
+	ListaAdy.agregar_arista( nd,nd2 );
+	ListaAdy.agregar_nodo( nd );
+	ListaAdy.eliminar_arista( nd,nd2 );
+	ListaAdy.eliminar_nodo( nd.get_id());
+
+
+
+
+
+	
 	cin.ignore();
 	return 0;
 }

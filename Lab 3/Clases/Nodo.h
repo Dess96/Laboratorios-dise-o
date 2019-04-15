@@ -13,7 +13,8 @@ private:
 
 public:
 	Nodo() {
-
+		id = 0;
+		sig = nullptr;
 	}
 
 	~Nodo() {
