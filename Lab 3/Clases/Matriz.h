@@ -16,26 +16,23 @@ public:
 	Matriz() {
 		num_elem = 0;
 		adyacencias.resize(MAX, vector<int>(MAX));
+		cout << "Creando grafo por Matriz de adyacencias" << endl;
 	}
 
 	~Matriz() {
 
 	}
-	void crear_grafo() override {
-		cout << "Creando grafo por Matriz de adyacencias" << endl;
-	}
-
 	void agregar_nodo() override {
-		cout << " en matriz" << endl;
+		cout << "agregando nodo en matriz" << endl;
 	}
 	void agregar_arista() override {
-		cout << " en matriz" << endl;
+		cout << "agregando arista en matriz" << endl;
 	}
 	void eliminar_nodo() override {
-		cout << " en matriz" << endl;
+		cout << "eliminando nodo en matriz" << endl;
 	}
 	void eliminar_arista() override {
-		cout << " en matriz" << endl;
+		cout << "eliminando arista en matriz" << endl;
 	}
 
 	/*void agregar_arista(Nodo origen, Nodo destino) override {

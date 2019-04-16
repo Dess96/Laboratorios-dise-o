@@ -15,26 +15,23 @@ public:
 	Lista() {
 		num_elem = 0;
 		nodos.resize(1);
+		cout << "Creando grafo por Lista de adyacencias" << endl;
 	}
 
 	~Lista() {
 
 	}
-	void crear_grafo() override {
-		cout << "Creando grafo por Lista de adyacencias" << endl;
-	}
-
 	void agregar_nodo() override {
-		cout << " en lista" << endl;
+		cout << "agregando nodo en lista" << endl;
 	}
 	void agregar_arista() override {
-		cout << " en lista" << endl;
+		cout << "agregando arista en lista" << endl;
 	}
 	void eliminar_nodo() override {
-		cout << " en lista" << endl;
+		cout << "eliminando nodo en lista" << endl;
 	}
 	void eliminar_arista() override {
-		cout << " en lista" << endl;
+		cout << "eliminando arista en lista" << endl;
 	}
 
 

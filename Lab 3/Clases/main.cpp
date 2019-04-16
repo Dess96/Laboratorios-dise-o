@@ -18,7 +18,7 @@ int main() {
 	MatrizAdy.agregar_nodo(nd);
 	MatrizAdy.eliminar_arista(nd, nd2);
 	MatrizAdy.eliminar_nodo(nd.get_id());
-
+	cout << endl;
 	Lista lista;
 	TipoGrafo ListaAdy{ lista };
 	ListaAdy.agregar_arista( nd,nd2 );
