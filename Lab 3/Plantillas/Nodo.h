@@ -29,8 +29,9 @@ public:
 		return id;
 	}
 
-	Nodo* get_siguiente();
-	void modificar_sig(Nodo* sig);
+	Nodo* get_siguiente() {
+		return this->sig;
+	}
 };
 #endif // !NODO_B
 

@@ -1,12 +1,14 @@
-#include"Implementaciones.h"
-#include "Nodo.h"
+#ifndef List
+#define List
+
+#include"Grafo.h"
+#include"Nodo.h"
 #include<vector>
 #include<iostream>
-#define MAX 100
 
 using namespace std;
 
-class Lista : public Implementaciones {
+class Lista : public Grafo, public Implementaciones<Lista> {
 private:
 	vector<Nodo> nodos;
 	int num_elem;
@@ -21,18 +23,20 @@ public:
 	~Lista() {
 
 	}
-	void agregar_nodo() override {
+	void agregar_nodos(Nodo agr_nodo) override {
 		cout << "agregando nodo en lista" << endl;
 	}
-	void agregar_arista() override {
+
+	void agregar_aristas(Nodo origen, Nodo destino) override {
 		cout << "agregando arista en lista" << endl;
 	}
-	void eliminar_nodo() override {
+
+	void eliminar_nodos(int id) override {
 		cout << "eliminando nodo en lista" << endl;
 	}
-	void eliminar_arista() override {
+
+	void eliminar_aristas(Nodo origen, Nodo destino) override {
 		cout << "eliminando arista en lista" << endl;
 	}
-
-
 };
+#endif // !List
