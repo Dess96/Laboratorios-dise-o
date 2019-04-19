@@ -6,14 +6,39 @@
 
 using namespace std;
 
+
+template <typename T>
 class Grafo {
 
+protected:
+	T imp;
+
 public:
+
 	
+	Grafo() :imp{imp}{
+		T{};
+		
+
+	}
 	~Grafo() {};
-	virtual void agregar_aristas(Nodo origen, Nodo destino) = 0;
-	virtual void agregar_nodos(Nodo agr_nodo) = 0;
-	virtual void eliminar_aristas(Nodo origen, Nodo destino) = 0;
-	virtual void eliminar_nodos(int id) = 0;
+	void agregar_arista(Nodo origen, Nodo destino)  {
+		imp.agregar_arista(origen,destino);
+
+	}
+	void agregar_nodo(Nodo agr_nodo)  {
+		imp.agregar_nodo(agr_nodo);
+
+	}
+	void eliminar_arista(Nodo origen, Nodo destino)  {
+		imp.eliminar_arista(origen,destino);
+
+
+	}
+	void eliminar_nodo(Nodo nd)  {
+
+		imp.eliminar_nodo(nd);
+
+	}
 };
 #endif // !GRAFO

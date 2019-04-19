@@ -1,7 +1,7 @@
 #include"Matriz.h"
 #include "Lista.h"
 #include"Nodo.h"
-#include "TipoGrafo.h"
+#include "Grafo.h"
 
 int main() {
 	Matriz m;
@@ -13,14 +13,14 @@ int main() {
 	nd3.set_id(2);
 
 	
-	TipoGrafo MatrizAdy{ m };
+	Grafo MatrizAdy{ m };
 	MatrizAdy.agregar_arista(nd, nd2);
 	MatrizAdy.agregar_nodo(nd);
 	MatrizAdy.eliminar_arista(nd, nd2);
 	MatrizAdy.eliminar_nodo(nd.get_id());
 	cout << endl;
 	Lista lista;
-	TipoGrafo ListaAdy{ lista };
+	Grafo ListaAdy{ lista };
 	ListaAdy.agregar_arista( nd,nd2 );
 	ListaAdy.agregar_nodo( nd );
 	ListaAdy.eliminar_arista( nd,nd2 );

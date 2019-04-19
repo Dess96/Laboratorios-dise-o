@@ -2,13 +2,14 @@
 #define List
 
 #include"Grafo.h"
-#include"Nodo.h"
+
+#include"Implementaciones.h"
 #include<vector>
 #include<iostream>
 
 using namespace std;
 
-class Lista : public Grafo, public Implementaciones<Lista> {
+class Lista : public Implementaciones {
 private:
 	vector<Nodo> nodos;
 	int num_elem;
@@ -23,19 +24,19 @@ public:
 	~Lista() {
 
 	}
-	void agregar_nodos(Nodo agr_nodo) override {
+	void agregar_nodo(Nodo agr_nodo) override {
 		cout << "agregando nodo en lista" << endl;
 	}
 
-	void agregar_aristas(Nodo origen, Nodo destino) override {
+	void agregar_arista(Nodo origen, Nodo destino) override {
 		cout << "agregando arista en lista" << endl;
 	}
 
-	void eliminar_nodos(int id) override {
+	void eliminar_nodo(Nodo id) override {
 		cout << "eliminando nodo en lista" << endl;
 	}
 
-	void eliminar_aristas(Nodo origen, Nodo destino) override {
+	void eliminar_arista(Nodo origen, Nodo destino) override {
 		cout << "eliminando arista en lista" << endl;
 	}
 };

@@ -3,31 +3,12 @@
 
 #include "Grafo.h"
 
-class TipoGrafo : public Grafo {
+class TipoGrafo  {
 
 public:
-	TipoGrafo(Implementaciones& imp) : Grafo{ imp } {
+	TipoGrafo() {
 	}
 	~TipoGrafo() {}
-
-	void agregar_arista(Nodo origen, Nodo destino) override {
-		imp.agregar_arista();
-		
-	}
-	void agregar_nodo(Nodo agr_nodo) override {
-		imp.agregar_nodo();
-
-	}
-	void eliminar_arista(Nodo origen, Nodo destino) override {
-		imp.eliminar_arista();
-
-
-	}
-	void eliminar_nodo(int id) override {
-
-		imp.eliminar_nodo();
-
-	}
 
 };
 

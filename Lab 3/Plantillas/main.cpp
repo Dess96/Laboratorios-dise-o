@@ -3,17 +3,32 @@
 #include"Nodo.h"
 
 int main() {
-	Matriz m;
-	Nodo nd, nd1;
-	m.agregar_arista(m);
-	m.agregar_nodo(m);
-	m.eliminar_arista(m);
-	m.eliminar_nodo(m);
-	Lista l;
-	l.agregar_arista(l);
-	l.agregar_nodo(l);
-	l.eliminar_arista(l);
-	l.eliminar_nodo(l);
+	Nodo nd;
+	nd.set_id(0);
+	Nodo nd2;
+	nd2.set_id(1);
+	Nodo nd3;
+	nd3.set_id(2);
+	
+	Grafo<Lista> grafo;
+
+	grafo.agregar_nodo(nd);
+	grafo.agregar_arista(nd, nd2);
+
+	grafo.eliminar_nodo(nd);
+	grafo.eliminar_arista(nd, nd2);
+
+	cout << endl;
+
+	Grafo<Matriz> grafo2;
+
+	grafo2.agregar_nodo(nd);
+	grafo2.agregar_arista(nd, nd2);
+
+	grafo2.eliminar_nodo(nd);
+	grafo2.eliminar_arista(nd, nd2);
+
+
 	cin.ignore();
 	return 0;
 }

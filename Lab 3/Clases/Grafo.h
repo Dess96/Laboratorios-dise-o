@@ -10,14 +10,28 @@ using namespace std;
 class Grafo {
 protected:
 	Implementaciones& imp;
-	Grafo(Implementaciones& imp) : imp{imp} {}
 
 public:
+	Grafo(Implementaciones& imp) : imp{ imp } {}
 	
 	~Grafo() {};
-	virtual void agregar_arista(Nodo origen, Nodo destino) = 0;
-	virtual void agregar_nodo(Nodo agr_nodo) = 0;
-	virtual void eliminar_arista(Nodo origen, Nodo destino) = 0;
-	virtual void eliminar_nodo(int id) = 0;
+	void agregar_arista(Nodo origen, Nodo destino)  {
+		imp.agregar_arista();
+
+	}
+	void agregar_nodo(Nodo agr_nodo)  {
+		imp.agregar_nodo();
+
+	}
+	void eliminar_arista(Nodo origen, Nodo destino)  {
+		imp.eliminar_arista();
+
+
+	}
+	void eliminar_nodo(int id)  {
+
+		imp.eliminar_nodo();
+
+	}
 };
 #endif // !GRAFO

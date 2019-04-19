@@ -1,17 +1,16 @@
 #include"Implementaciones.h"
-#include"Grafo.h"
-#include"Nodo.h"
+#include "Nodo.h"
 #include<vector>
 #include<iostream>
 #define MAX 100
 
 using namespace std;
 
-class Matriz : public Grafo, public Implementaciones<Matriz> {
+class Matriz : public Implementaciones {
 private:
 	vector<vector<int>> adyacencias;
 	vector<Nodo> nodos;
-	int num_elem; 
+	int num_elem;
 
 public:
 	Matriz() {
@@ -23,19 +22,17 @@ public:
 	~Matriz() {
 
 	}
-	void agregar_nodos(Nodo agr_nodo) override {
+	void agregar_nodo(Nodo nd) override  {
 		cout << "agregando nodo en matriz" << endl;
 	}
-
-	void agregar_aristas(Nodo origen, Nodo destino) override {
+	void agregar_arista(Nodo nd,Nodo nd2) override  {
 		cout << "agregando arista en matriz" << endl;
 	}
-
-	void eliminar_nodos(int id) override {
+	void eliminar_nodo(Nodo nd) override {
 		cout << "eliminando nodo en matriz" << endl;
 	}
-
-	void eliminar_aristas(Nodo origen, Nodo destino) override {
+	void eliminar_arista(Nodo nd, Nodo nd2) override  {
 		cout << "eliminando arista en matriz" << endl;
 	}
+
 };
