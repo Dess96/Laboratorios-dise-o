@@ -17,3 +17,6 @@ public:
 };
 #endif // !GRAF_UML
 
+void GrafoUML::agregar_clase(ND_UML nodo_clase) {
+	cout << "Agregada la clase " << nodo_clase.get_nombre() << " al diagrama UML" << endl;
+}

@@ -6,7 +6,7 @@ public:
 	virtual void imprimir() const override {
 		Arista_UML uml;
 		uml.imprimir();
-		cout << " tiene composicion ";
+		cout << " de composicion " << endl;
 	}
 };
 

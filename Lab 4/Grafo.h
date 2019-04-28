@@ -10,8 +10,8 @@ class Grafo {
 private:
 	vector<Nodo> matriz;
 public:
-	Grafo();
-	~Grafo();
+	Grafo() {};
+	~Grafo() {};
 	void agregar_arista(Nodo origen, Nodo destino);
 	void agregar_nodo(Nodo agr_nodo);
 	void eliminar_arista(int id);

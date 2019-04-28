@@ -5,7 +5,7 @@ public:
 	Arista_UML() {};
 	virtual ~Arista_UML(){};
 	virtual void imprimir() const override{
-		cout << "La arista uml";
+		cout << "Se ha creado una arista uml";
 	}
 	void set_rol_inicio(int);
 	void set_rol_fin(int);

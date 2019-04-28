@@ -5,6 +5,6 @@ public:
 	virtual void imprimir() const override {
 		Arista_UML uml;
 		uml.imprimir();
-		cout << " tiene herencia ";
+		cout << " de herencia " << endl;
 	}
 };
