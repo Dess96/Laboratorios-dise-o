@@ -1,30 +1,19 @@
-#include "AlmacenadorGrafo.h"
 #include <iostream>
 
 using namespace std;
 
 class AlmacenadorXML : public AlmacenadorGrafo {
 public:
-	AlmacenadorXML();
-	~AlmacenadorXML();
-	virtual void imprimir_objeto() override;
-	virtual string obtener_almacenador() override;
+	AlmacenadorXML() {};
+	~AlmacenadorXML() {};
+	virtual void imprimir_objeto(GrafoUML *gr) override;
+
 private:
 	string almacenador;
 };
 
-AlmacenadorXML::AlmacenadorXML() {
-
-}
-
-AlmacenadorXML::~AlmacenadorXML() {
-
-}
-
-void AlmacenadorXML::imprimir_objeto() {
-	cout << "Grafo con implementacion XML" << endl;
-}
-
-string AlmacenadorXML::obtener_almacenador() {
-	return almacenador;
+void AlmacenadorXML::imprimir_objeto(GrafoUML *gr) {
+	for (int i = 0; i < gr->nodos.size(); i++) {
+		cout << gr->nodos[i].get_nombre() << endl;
+	}
 }

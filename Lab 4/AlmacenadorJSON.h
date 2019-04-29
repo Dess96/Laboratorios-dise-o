@@ -5,26 +5,14 @@ using namespace std;
 
 class AlmacenadorJSON : public AlmacenadorGrafo {
 public:
-	AlmacenadorJSON();
-	~AlmacenadorJSON();
-	virtual void imprimir_objeto() override;
-	virtual string obtener_almacenador() override;
+	AlmacenadorJSON() {};
+	~AlmacenadorJSON() {};
+	virtual void imprimir_objeto(GrafoUML *gr) override;
+
 private:
 	string almacenador;
 };
 
-AlmacenadorJSON::AlmacenadorJSON() {
-
-}
-
-AlmacenadorJSON::~AlmacenadorJSON() {
-
-}
-
-void AlmacenadorJSON::imprimir_objeto() {
-	cout << "Grafo con implementacion XML" << endl;
-}
-
-string AlmacenadorJSON::obtener_almacenador() {
-	return almacenador;
+void AlmacenadorJSON::imprimir_objeto(GrafoUML *gr) {
+	
 }
