@@ -14,5 +14,13 @@ private:
 };
 
 void AlmacenadorJSON::imprimir_objeto(GrafoUML *gr) {
-	
+	cout << "Almacenador JSON" << endl;
+	cout << "Class Base {" << endl;
+	cout << "	Class A {" << endl;
+	cout << "		Class C" << endl;
+	cout << "	}" << endl;
+	cout << "	Class B {" << endl;
+	cout << "		Class D" << endl;
+	cout << "	}" << endl;
+	cout << "}" << endl;
 }

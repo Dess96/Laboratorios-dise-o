@@ -42,6 +42,7 @@ int main() {
 	grafo_prueba.agregar_arista(nodo_c, nodo_a, "composicion");
 	cout << endl;
 	xml->imprimir_objeto(&grafo_prueba);
+	cout << endl;
 	json->imprimir_objeto(&grafo_prueba);
 
 	cin.ignore();

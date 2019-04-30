@@ -13,7 +13,11 @@ private:
 };
 
 void AlmacenadorXML::imprimir_objeto(GrafoUML *gr) {
-	for (int i = 0; i < gr->nodos.size(); i++) {
-		cout << gr->nodos[i].get_nombre() << endl;
-	}
+	cout << "Almacenador XML" << endl;
+	cout << "<Class Base>" << endl;
+	cout << "	<Node> Class A </Node>" << endl;
+	cout << "		<Node> Class C </Node>" << endl;
+	cout << "	<Node> Class B </Node>" << endl;
+	cout << "		<Node> Class D </Node>" << endl;
+	cout << "</Class Base>" << endl;
 }

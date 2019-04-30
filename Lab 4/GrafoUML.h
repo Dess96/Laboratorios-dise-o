@@ -16,13 +16,11 @@ public:
 	void eliminar_paquete(int id);
 	void eliminar_objeto(int id);
 	void agregar_arista(ND_UML inicio, ND_UML fin, string tipo_arista);
-	vector<ND_UML> nodos;
 };
 #endif // !GRAF_UML
 
 void GrafoUML::agregar_clase(ND_UML nodo_clase) {
 	cout << "Agregada la clase " << nodo_clase.get_nombre() << " al diagrama UML" << endl;
-	nodos.push_back(nodo_clase);
 }
 
 void GrafoUML::agregar_arista(ND_UML inicio, ND_UML fin, string tipo_arista) {
