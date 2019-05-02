@@ -3,3 +3,4 @@
 2. Laboratorio 2: Patrón Composición
 3. Laboratorio 3: Patrón Puente
 4. Laboratorio 4: Patrón Constructor
+5. Laboratorio 5: Patrón Estrategia
