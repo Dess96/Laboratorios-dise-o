@@ -7,20 +7,16 @@ class AlmacenadorJSON : public AlmacenadorGrafo {
 public:
 	AlmacenadorJSON() {};
 	~AlmacenadorJSON() {};
-	virtual void imprimir_objeto(GrafoUML *gr) override;
-
-private:
-	string almacenador;
+	virtual void imprimir_clase(GrafoUML *gr) override;
 };
 
-void AlmacenadorJSON::imprimir_objeto(GrafoUML *gr) {
-	cout << "Almacenador JSON" << endl;
-	cout << "Class Base {" << endl;
-	cout << "	Class A {" << endl;
-	cout << "		Class C" << endl;
-	cout << "	}" << endl;
-	cout << "	Class B {" << endl;
-	cout << "		Class D" << endl;
-	cout << "	}" << endl;
+void AlmacenadorJSON::imprimir_clase(GrafoUML *gr) {
+	vector<ND_UML> vector = gr->get_vector();
+	cout << "Graph UML {" << endl;
+	cout << "\t[" << endl;
+	for (size_t i = 0; i < vector.size(); ++i) {
+		cout << "\t Name:" << vector[i].get_nombre() << "," << endl;
+	}
+	cout << "\t]" << endl;
 	cout << "}" << endl;
 }

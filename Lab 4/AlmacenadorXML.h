@@ -6,18 +6,14 @@ class AlmacenadorXML : public AlmacenadorGrafo {
 public:
 	AlmacenadorXML() {};
 	~AlmacenadorXML() {};
-	virtual void imprimir_objeto(GrafoUML *gr) override;
-
-private:
-	string almacenador;
+	virtual void imprimir_clase(GrafoUML *gr) override;
 };
 
-void AlmacenadorXML::imprimir_objeto(GrafoUML *gr) {
-	cout << "Almacenador XML" << endl;
-	cout << "<Class Base>" << endl;
-	cout << "	<Node> Class A </Node>" << endl;
-	cout << "		<Node> Class C </Node>" << endl;
-	cout << "	<Node> Class B </Node>" << endl;
-	cout << "		<Node> Class D </Node>" << endl;
-	cout << "</Class Base>" << endl;
+void AlmacenadorXML::imprimir_clase(GrafoUML *gr) {
+	vector<ND_UML> vector = gr->get_vector();
+	cout << "<Graph> Graph UML" << endl;
+	for (size_t i = 0; i < vector.size(); ++i) {
+		cout << "\t <Node>" << vector[i].get_nombre() << "</Node>" << endl;
+	}
+	cout << "</Graph>" << endl;
 }
