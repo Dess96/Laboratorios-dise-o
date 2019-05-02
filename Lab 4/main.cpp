@@ -41,9 +41,9 @@ int main() {
 	grafo_prueba.agregar_arista(nodo_b, nodo_d, "dependencia");
 	grafo_prueba.agregar_arista(nodo_c, nodo_a, "composicion");
 	cout << endl;
-	xml->imprimir_objeto(&grafo_prueba);
+	xml->imprimir_clase(&grafo_prueba);
 	cout << endl;
-	json->imprimir_objeto(&grafo_prueba);
+	json->imprimir_clase(&grafo_prueba);
 
 	cin.ignore();
 	return 0;
