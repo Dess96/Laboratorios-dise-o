@@ -1,0 +1,9 @@
+n ClaseBase
+n ClaseA
+n ClaseB
+n ClaseC
+n ClaseD
+h h1
+h h2
+d dep
+c comp

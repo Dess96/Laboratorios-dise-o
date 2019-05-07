@@ -28,7 +28,7 @@ void GrafoUML::agregar_clase(ND_UML nodo_clase) {
 }
 
 void GrafoUML::agregar_arista(ND_UML inicio, ND_UML fin, string tipo_arista) {
-	cout << "Creando arista " << tipo_arista << " desde " << inicio.get_nombre() << " hasta " << fin.get_nombre() << endl;
+	cout << "Creando arista " << tipo_arista << endl;
 }
 
 vector<ND_UML>GrafoUML::get_vector () {
